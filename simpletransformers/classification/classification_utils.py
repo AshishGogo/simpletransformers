@@ -544,10 +544,10 @@ def collate_fn(batch):
 def get_image_transforms():
     return transforms.Compose(
         [
-            transforms.Resize(256),
+            transforms.Resize(244),
             transforms.CenterCrop(224),
             transforms.ToTensor(),
-            transforms.Normalize(mean=[0.46777044, 0.44531429, 0.40661017], std=[0.12221994, 0.12145835, 0.14380469],),
+            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225],),
         ]
     )
 
