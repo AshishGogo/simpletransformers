@@ -546,8 +546,9 @@ def get_image_transforms():
         [
             transforms.Resize(244),
             transforms.CenterCrop(224),
+            transforms.Pad(padding_mode='edge'),
             transforms.ToTensor(),
-            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225],),
+            transforms.Normalize(mean=[0.46777044, 0.44531429, 0.40661017], std=[0.12221994, 0.12145835, 0.14380469],),
         ]
     )
 
