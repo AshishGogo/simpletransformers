@@ -544,7 +544,7 @@ def collate_fn(batch):
 def get_image_transforms():
     return transforms.Compose(
         [
-            transforms.Resize(244),
+            transforms.Resize(256),
             transforms.CenterCrop(224),
             transforms.RandomGrayscale(p=0.25),
             transforms.ToTensor(),
