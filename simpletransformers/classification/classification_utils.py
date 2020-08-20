@@ -546,7 +546,8 @@ def get_image_transforms():
         [
             transforms.Resize(256),
             transforms.CenterCrop(224),
-            transforms.RandomGrayscale(p=0.25),
+            transforms.RandomGrayscale(p=0.10),
+            transforms.RandomErasing(p=0.10),
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.46777044, 0.44531429, 0.40661017], std=[0.12221994, 0.12145835, 0.14380469],),
         ]
